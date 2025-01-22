@@ -18,7 +18,7 @@ const DeveloperList = ({ handleLogout }) => {
   const fetchDevelopers = async () => {
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch("http://127.0.0.1:5000/api/developers", {
+      const response = await fetch("https://gamingdb-test3.vercel.app/api/developers", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
