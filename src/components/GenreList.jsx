@@ -20,7 +20,7 @@ const GenreList = ({ handleLogout }) => {
   const fetchGenres = async () => {
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch("http://127.0.0.1:5000/api/genres", {
+      const response = await fetch("https://gamingdb-test3.vercel.app/api/genres", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -63,7 +63,7 @@ const GenreList = ({ handleLogout }) => {
     event.preventDefault();
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch("http://127.0.0.1:5000/api/genres", {
+      const response = await fetch("https://gamingdb-test3.vercel.app/api/genres", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -95,7 +95,7 @@ const GenreList = ({ handleLogout }) => {
     event.preventDefault();
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch(`http://127.0.0.1:5000/api/genres/${selectedGenre.id_genre}`, {
+      const response = await fetch(`https://gamingdb-test3.vercel.app/api/genres/${selectedGenre.id_genre}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -130,7 +130,7 @@ const GenreList = ({ handleLogout }) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const response = await fetch(`http://127.0.0.1:5000/api/genres/${genreId}`, {
+          const response = await fetch(`https://gamingdb-test3.vercel.app/api/genres/${genreId}`, {
             method: "DELETE",
             headers: {
               Authorization: `Bearer ${token}`,
