@@ -19,7 +19,7 @@ const PublisherList = ({ handleLogout }) => {
   const fetchPublishers = async () => {
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch("http://127.0.0.1:5000/api/publishers", {
+      const response = await fetch("https://gamingdb-test3.vercel.app/api/publishers", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -62,7 +62,7 @@ const PublisherList = ({ handleLogout }) => {
     event.preventDefault();
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch("http://127.0.0.1:5000/api/publishers", {
+      const response = await fetch("https://gamingdb-test3.vercel.app/api/publishers", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -94,7 +94,7 @@ const PublisherList = ({ handleLogout }) => {
     event.preventDefault();
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch(`http://127.0.0.1:5000/api/publishers/${selectedPublisher.id_pub}`, {
+      const response = await fetch(`https://gamingdb-test3.vercel.app/api/publishers/${selectedPublisher.id_pub}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -129,7 +129,7 @@ const PublisherList = ({ handleLogout }) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const response = await fetch(`http://127.0.0.1:5000/api/publishers/${publisherId}`, {
+          const response = await fetch(`https://gamingdb-test3.vercel.app/api/publishers/${publisherId}`, {
             method: "DELETE",
             headers: {
               Authorization: `Bearer ${token}`,
