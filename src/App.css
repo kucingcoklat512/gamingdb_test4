@@ -1,0 +1,154 @@
+body {
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text color */
+  font-family: 'Roboto', sans-serif; /* Modern font */
+}
+
+#root {
+  max-width: 1200px; /* Set a max width for the container */
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  text-shadow: 0 0 5px #00ffcc; /* Neon text effect */
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.card {
+  background-color: #1e1e1e; /* Card background */
+  border: 1px solid #333; /* Card border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 2em;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.5); /* Neon glow effect */
+}
+
+.card-header {
+  padding: 1em; /* Padding for header */
+  display: flex; /* Flexbox for alignment */
+  justify-content: space-between; /* Space between title and toggle */
+  align-items: center; /* Center align items */
+}
+
+.card-body {
+  padding: 1em; /* Padding for body */
+  border-top: 1px solid #333; /* Border between header and body */
+  background-color: #1e1e1e; /* Match card body background with card background */
+}
+
+button {
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.bg-gray-200 {
+  background-color: #2a2a2a; /* Darker gray for forms */
+}
+
+.bg-blue-600 {
+  background-color: #007acc; /* Blue color for buttons */
+}
+
+.bg-red-500 {
+  background-color: #ff3d00; /* Red color for delete button */
+}
+
+.bg-yellow-500 {
+  background-color: #ffcc00; /* Yellow color for edit button */
+}
+
+.bg-green-600 {
+  background-color: #00c853; /* Green color for save button */
+}
+
+.bg-gray-500 {
+  background-color: #616161; /* Gray color for cancel button */
+}
+
+.bg-gray-200:hover {
+  background-color: #3a3a3a; /* Darker gray on hover */
+}
+
+.text-gray-600 {
+  color: #b0b0b0; /* Lighter gray for text */
+}
+
+.text-gray-800 {
+  color: #e0e0e0; /* Light text color */
+}
+
+.text-blue-600 {
+  color: #00ffcc; /* Neon blue for links */
+}
+
+/* Animasi untuk modal */
+.modal-enter {
+  opacity: 0;
+  transform: scale(0.5);
+}
+
+.modal-enter-active {
+  opacity: 1;
+  transform: scale(1.1);
+  animation: bounceIn 0.3s forwards;
+}
+
+.modal-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.modal-exit-active {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Custom styles for the sidebar */
+.sidebar {
+  background-color: #1e1e1e; /* Match sidebar background with card background */
+  border-right: 1px solid #333; /* Light border on the right */
+}
+
+.sidebar a {
+  padding: 10px 15px; /* Add padding to links */
+  border-radius: 5px; /* Rounded corners for links */
+  color: #e0e0e0; /* Default link color */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.sidebar a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+}
