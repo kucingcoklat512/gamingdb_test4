@@ -18,7 +18,7 @@ const RatingList = ({ handleLogout }) => {
   const fetchRatings = async () => {
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch("http://127.0.0.1:5000/api/ratings", {
+      const response = await fetch("https://gamingdb-test3.vercel.app/api/ratings", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -61,7 +61,7 @@ const RatingList = ({ handleLogout }) => {
     event.preventDefault();
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch("http://127.0.0.1:5000/api/ratings", {
+      const response = await fetch("https://gamingdb-test3.vercel.app/api/ratings", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -93,7 +93,7 @@ const RatingList = ({ handleLogout }) => {
     event.preventDefault();
     const token = localStorage.getItem("token");
     try {
-      const response = await fetch(`http://127.0.0.1:5000/api/ratings/${selectedRating.id_rate}`, {
+      const response = await fetch(`https://gamingdb-test3.vercel.app/api/ratings/${selectedRating.id_rate}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -128,7 +128,7 @@ const RatingList = ({ handleLogout }) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const response = await fetch(`http://127.0.0.1:5000/api/ratings/${ratingId}`, {
+          const response = await fetch(`https://gamingdb-test3.vercel.app/api/ratings/${ratingId}`, {
             method: "DELETE",
             headers: {
               Authorization: `Bearer ${token}`,
